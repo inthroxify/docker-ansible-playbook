@@ -64,4 +64,6 @@ ENV ANSIBLE_LIBRARY /ansible/library
 
 WORKDIR /ansible/playbooks
 
-ENTRYPOINT ["ansible-playbook"]
+COPY docker-entrypoint.sh /
+
+ENTRYPOINT ["sh", "docker-entrypoint.sh"]
