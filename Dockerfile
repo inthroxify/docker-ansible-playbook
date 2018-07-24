@@ -66,4 +66,4 @@ WORKDIR /ansible/playbooks
 
 COPY docker-entrypoint.sh /
 
-ENTRYPOINT ["sh", "docker-entrypoint.sh"]
+ENTRYPOINT ["sh", "/docker-entrypoint.sh"]
