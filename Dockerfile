@@ -17,7 +17,8 @@ ENV BUILD_PACKAGES \
   py-paramiko \
   py-pip \
   py-yaml \
-  ca-certificates
+  ca-certificates \
+  vim
 
 # If installing ansible@testing
 #RUN \
@@ -38,6 +39,7 @@ RUN set -x && \
     \
     echo "==> Adding Python runtime..."  && \
     apk add --no-cache ${BUILD_PACKAGES} && \
+    ln -s /usr/bin/vim /usr/bin/vi && \
     pip install --upgrade pip && \
     pip install python-keyczar docker-py && \
     \
