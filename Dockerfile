@@ -18,6 +18,7 @@ ENV BUILD_PACKAGES \
   py-pip \
   py-yaml \
   ca-certificates \
+  rsync \
   vim
 
 # If installing ansible@testing
