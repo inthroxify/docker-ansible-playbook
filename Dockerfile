@@ -39,7 +39,7 @@ RUN set -x && \
     \
     echo "==> Adding Python runtime..."  && \
     apk add --no-cache ${BUILD_PACKAGES} && \
-    ln -s /usr/bin/vim /usr/bin/vi && \
+    ln -sf /usr/bin/vim /usr/bin/vi && \
     pip install --upgrade pip && \
     pip install python-keyczar docker-py && \
     \
